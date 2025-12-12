@@ -25,7 +25,7 @@ export const signup = async (req, res) => {
     await generateToken(user._id, res);
 
     try {
-      await sendWelcomeEmail(user.email, user.fullName, ENV.CLIENT_URL);
+      // await sendWelcomeEmail(user.email, user.fullName, ENV.CLIENT_URL);
       res.status(201).json({
         _id: user._id,
         fullName: user.fullName,
